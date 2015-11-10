@@ -1,0 +1,196 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/solarized_light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.credits
+{
+  min-height:20px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+  <div class="ui container">
+  <header class="ui middle aligned center aligned stackable grid segment">
+    <div class="eight wide  column">
+      <h2> 3: Object Interaction </h2>
+      <!--<h3> () </h3>-->
+    </div>
+    <div class="one wide column sitemap">
+      <div class="popup" data-content="Top Level Topic View">
+        <a href="../index.html"> <i class="big sitemap icon"></i></a>
+        topics
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Presentations">
+        <a href="../talkwall.html"> <i class="big film icon"></i></a>
+        slides
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Labs">
+        <a href="../labwall.html"> <i class="big lab icon"></i></a>
+        labs
+      </div>
+    </div>
+    <div class="five wide column">
+      <img class="ui centered medium image" src="http://www.wit.ie/assets/images/wit_crest.png">
+    </div>
+  </header>
+
+<script>
+  $('.popup')
+  .popup()
+;
+</script>
+
+
+<div class="ui four doubling stackable cards">
+      <a class="ui card" href="./talk-a/lecture_05.pdf">
+    <div class="content">
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Abstraction & modularization </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./talk-a/lecture_05.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Abstraction means ignoring details for the moment and concentrating on the problem at a higher level. Modularization comprises subdividing the problem into manageable parts each of which interacts in well-defined ways into the overall project.</p>
+      </div>
+    </div>
+  </a>
+
+      <a class="ui card" href="./talk-b/lecture_06.pdf">
+    <div class="content">
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Abstraction & modularization </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./talk-b/lecture_06.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we use the BlueJ clock to demonstate use of modularization. We develop a NumberDisplay class and adapt it for dual use, both to display hours and minutes.</p>
+      </div>
+    </div>
+  </a>
+
+      <a class="ui card" href="book-a/index.html">
+    <div class="content">
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Abstraction-modularization[1] </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Use set of object from <em>shapes</em> project to manually create a house object. Use existing Square, Circle and Triangle classes. Manually assemble component set to create and display initial design. Develop a new class RectangleBJ by refactoring Square class. Further refactor Circle and Triangle classes.</p>
+      </div>
+    </div>
+  </a>
+
+      <a class="ui card" href="book-b/index.html">
+    <div class="content">
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Abstraction-modularization[2] </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Develop a new class Tree using RectangleBJ and Triangle classes. Develop a new class Picture containing House, Circle (sun) and Tree fields.</p>
+      </div>
+    </div>
+  </a>
+
+      <a class="ui card" href="book-c/index.html">
+    <div class="content">
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Abstraction-modularization[3] </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Based on BlueJ ClockDisplay progressively develop NumberDisplay class to display a pair of digits to represent hours and minutes using the existing BlueJ class Clock to drive the ClockDisplay.</p>
+      </div>
+    </div>
+  </a>
+
+  </div>
+   </div>
+
+
+
+  <br><br>
+  <div class="ui bottom fixed borderless menu">
+    <div class="ui small item">
+    <p id="footertext">
+    Prepared by  John Fitzgerald (jfitzgerald@wit.ie). Except where otherwise noted, this content is licensed under a
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
+    </div>
+  </div>    <script>
+
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+})    </script>
+
+  </body>
+ </html>

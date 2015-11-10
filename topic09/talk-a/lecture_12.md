@@ -1,0 +1,3 @@
+Inheritance
+
+Inheritance is a powerful concept employed in object-oriented programming that together with polymorphism (already discussed) facilitates solutions to a wide variety of problems. A class may inherit from another class and in doing so gain access to much of the behaviour of that other class.  The class inherited from is referred to as the base class. The inheriting class is referred to as the subclass. Some or all of the base class behaviour may be used by the subclass and some base class behaviour may be overridden (redefined) by the subclass. Also, typically, the base class introduces new fields and methods.

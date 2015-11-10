@@ -1,0 +1,454 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/solarized_light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.credits
+{
+  min-height:20px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+  <div class="ui container">
+<style>
+
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+      Assignment-1
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="Assignment-1">
+        Assignment-1
+    </a>
+      <a class="item" data-tab="Guidelines">
+        Guidelines
+      </a>
+      <a class="item" data-tab="Question-1">
+        Question-1
+      </a>
+      <a class="item" data-tab="Question-2">
+        Question-2
+      </a>
+      <a class="item" data-tab="Question-3">
+        Question-3
+      </a>
+      <a class="item" data-tab="Question-4">
+        Question-4
+      </a>
+    </div>
+</div>
+
+<br><br>
+
+  <div  class="ui tab segment lab" data-tab="Assignment-1">
+    <h1>Readme</h1>
+<p>Assignment 1: This assignment is based on materials contained in the slide decks and labs in the first 3 topics, namely, <em>Introduction to Java programming language</em>, <em>Analysis &amp; refactoring class</em> and <em>Object Interaction</em>.</p>
+  </div>
+  <div  class="ui tab segment lab" data-tab="Guidelines">
+    <h1>Setup</h1>
+<p>Download the archive <em>assignment-1.zip</em> available <a href="archives/assignment-1.zip">here</a> and expand to a directory <em>workspaceBlueJ/assignments/assignment-1</em>.</p>
+<p>Your directory structure should be as depicted in Figure 1.</p>
+<p><img alt="Figure 1: directory structure" src="img/readme01.png"></p>
+<p>The supplied project contains skeleton code which forms the basis of the questions that follow.</p>
+<h2>Assignment completion guidelines</h2>
+<ul>
+<li>Submission material:<ul>
+<li>Complete the assignment by modifying the classes in the folder <em>assignments-1</em> as required in the questions that follow.<ul>
+<li>This folder should have been generated when you expanded the downloaded file <em>assignment-1.zip</em>.</li>
+</ul>
+</li>
+<li>When you are ready to submit, compress the folder <em>assignments-1</em>.<ul>
+<li>Before you compress the folder ensure that the downloaded zip file is not present in your <em>assignments</em> folder otherwise naming confusion is likely to occur.</li>
+</ul>
+</li>
+<li>Upload your completed source code in the single file <em>assignment-1.zip</em>.<ul>
+<li>Each student's file will be automatically stored in separate folders on Moodle thus ensuring naming conflicts will not arise.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </div>
+  <div  class="ui tab segment lab" data-tab="Question-1">
+    <h1>Question 1</h1>
+<p>Develop a Book class in accordance with the following specification:</p>
+<ul>
+<li>Package private fields:</li>
+</ul>
+<pre><code>  String   title
+  String   author
+  String   isbn
+  int      numberPages
+  boolean  borrowed
+  int      numberBorrowings
+</code></pre>
+
+<ul>
+<li>The constructor signature is:</li>
+</ul>
+<pre><code>Book(String title, String author, String isbn)
+</code></pre>
+
+<ul>
+<li>Write a setter method for the <em>numberPages</em> field. Here is the header:</li>
+</ul>
+<pre><code>public void setPages(int numberPages)
+</code></pre>
+
+<ul>
+<li>Assume that the book resides in a library. Write a method to facilitate borrowing the book:<ul>
+<li>Set <em>borrowed</em> to true.<ul>
+<li>The value of this boolean field should be <em>true</em> if a book is borrowed (on loan), else <em>false</em>.</li>
+</ul>
+</li>
+<li>Increment <em>numberBorrowings</em>.<ul>
+<li>This field keeps track of the number of times the book has been borrowed.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>public void borow()
+</code></pre>
+
+<ul>
+<li>Write method to check if a book is presently out on loan:</li>
+</ul>
+<pre><code>public boolean isBorrowed()
+</code></pre>
+
+<ul>
+<li>Write a method to return a book to the library.</li>
+</ul>
+<pre><code>public void returns()
+</code></pre>
+
+<ul>
+<li>Write a method to print details similar to that shown in Figure 1 for a sample book.</li>
+</ul>
+<pre><code>public void printDetails()
+</code></pre>
+
+<p><img alt="Figure 1: Sample book details" src="img/book-details.png"></p>
+<ul>
+<li>Develop a test class TestBook in which you:<ul>
+<li>Write a public method <em>testBook</em> within which you<ul>
+<li>Declare and initialize a new book</li>
+<li>Change the state of the book object so that when <em>printDetails</em> is invoked the output matches that in Figure 1.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </div>
+  <div  class="ui tab segment lab" data-tab="Question-2">
+    <h1>Question 2</h1>
+<p>Develop a Circle class with the following API:</p>
+<ul>
+<li>Do not include any of the graphics methods present in the BlueJ Circle class that we encountered in the labs.</li>
+</ul>
+<pre><code>public class Circle {
+  public Circle(double radius)
+  public Circle(double radius, double xCentre, double yCentre)
+  public double area() //area of circle
+  public double areaSector(double angleRadians) //area of sector of circle
+  public double circumference()
+  public void move(double xCentre, double yCentre) //relocate the circle
+  public void changeSize(int radius) //change size of circle by altering radius.
+}
+</code></pre>
+
+<p>The instance variables are:</p>
+<pre><code>    private double radius;
+    private double xCentre;
+    private double yCentre;
+</code></pre>
+
+<p>Avoid code duplication in the constructors by implementing and invoking a private method <em>setState</em>:</p>
+<pre><code>private void setState(double radius, double xCentre, double yCentre)
+</code></pre>
+
+<p>Do not rely on the default values of primitive variable. Instead, where necessary, set them equal to a specific value of your choosing.</p>
+<p>Apply style and documentation matching the accompanying <em>Cone</em> class.</p>
+<p>Use the Math library to evaluate properties as follows:</p>
+<pre><code>// Area of circle: 
+Math.PI*Math.pow(radius, 2)
+// Perimeter of circle: 
+2*Math.PI*radius
+// Area of sector of circle subtended by angle angleRadians: 
+0.5*Math.pow(radius, 2)*angleRadians
+</code></pre>
+
+<p>In general, except in the case of <strong>areaSector</strong>, enforce a condition rendering it impossible for a user to successfully input a negative number as an argument (actual parameter).</p>
+<ul>
+<li>If a user attempts to enter a negative number provide a short warning message.</li>
+<li>Consider providing a private method <em>boolean isValid(double value)</em> within which you check that each inputted <em>value</em> is valid.</li>
+<li>In the case of <strong>areaSector</strong>, use the library method <em>Math.abs(double)</em> to ensure that calculation of area is always performed using a positive angle.</li>
+</ul>
+<p>If a user inputs an angle greater than 2 PI in <em>areaSector</em> use modular arithmetic (the <a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html">Java remainder operator</a> <strong>%</strong>) or otherwise to ensure the angle used in calculations is in the range [0, 2 PI).</p>
+<ul>
+<li>Note: any angle in the range (- infinity, + infinity) is a valid angle. However, we require angles to be in the range [0, 2 PI), that is, in the range greater than or equal to zero and less than 2 PI.</li>
+</ul>
+<p><img alt="" src="img/sector.png"></p>
+  </div>
+  <div  class="ui tab segment lab" data-tab="Question-3">
+    <h1>Question 3</h1>
+<p>Open <em>ICTStrings</em> class source file located in the <em>strings</em> project.</p>
+<ul>
+<li>Complete the class by adding the following methods, the skeletons of which are already in place:</li>
+</ul>
+<h2>Task 1</h2>
+<p><em>isEqual</em>:</p>
+<ul>
+<li>signature <em>public static boolean isEqual(String s1, String s2)</em>.</li>
+<li>return <em>true</em> if the strings are equal</li>
+<li>else <em>false</em>.</li>
+</ul>
+<h2>Task 2</h2>
+<p><em>isEqualIgnoreCase</em>:</p>
+<ul>
+<li>signature <em>public static boolean isEqualIgnoreCase(String s1, String s2)</em>.</li>
+<li>return <em>true</em> if the strings are equal, ignoring case</li>
+<li>else return <em>false</em>.</li>
+</ul>
+<h2>Task 3</h2>
+<p><em>hasPrefix</em></p>
+<ul>
+<li>signature <em>public static boolean hasPrefix(String s1, String prefix)</em></li>
+<li>return <em>true</em> if <em>s1</em> begins with <em>prefix</em></li>
+<li>else return false</li>
+</ul>
+<h2>Task 4</h2>
+<p><em>length</em></p>
+<ul>
+<li>signature <em>public static int length(String s1, String s2)</em></li>
+<li>concatenate the strings <em>s1</em> and <em>s2</em>.</li>
+<li>evaluate the length of the concatenated string</li>
+<li>return the evaluated length</li>
+</ul>
+<h2>Task 5</h2>
+<p><em>toUpper</em></p>
+<ul>
+<li>signature <em>public static String toUpper(String s1)</em></li>
+<li>return a string whose characters match those in <em>s1</em> but are all upper case</li>
+</ul>
+<h2>Task 6</h2>
+<p><em>endsWith</em></p>
+<ul>
+<li>signature <em>public static String endsWith(String s1, String suffix)</em></li>
+<li>return a boolean whose value is true if <em>s1</em> ends with <em>suffix</em>, else return false.</li>
+</ul>
+<h2>Task 7</h2>
+<p><em>subString</em></p>
+<ul>
+<li>signature <em>public static subString(String s1, int beginIndex, int endIndex)</em></li>
+<li>return string a subset of <em>s1</em> beginning at <em>beginIndex</em> and whose final index is <em>endIndex</em>.</li>
+</ul>
+<h2>Task 8</h2>
+<p><em>reverse</em></p>
+<ul>
+<li>signature <em>public static String reverse(String s1)</em></li>
+<li>return a string that is equal to <em>s1</em> reversed.<ul>
+<li>Hint: use <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html">StringBuilder</a><ul>
+<li>consider searching <a href="http://stackoverflow.com">stackoverflow</a> for various options.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2></h2>
+<p>A test class TestICTStrings that includes test data is provided to facilitate testing of the methods above (See Figure 1).</p>
+<ul>
+<li>You can test the methods individually or</li>
+<li>Collectively by invoking <em>testAll</em>.</li>
+</ul>
+<p>The expected test results are shown in Figure 2.</p>
+<p><img alt="Figure 1: Test string methods" src="img/Q701.png"></p>
+<p><img alt="Figure 2: Expected test results" src="img/Q702.png"></p>
+  </div>
+  <div  class="ui tab segment lab" data-tab="Question-4">
+    <h1>Question 4</h1>
+<p>This question requires that you modify the 24-hour clock we encountered in the labs. </p>
+<ul>
+<li>
+<p>The classes Clock, ICTSkillsClock, ClockDisplay and NumberDisplay apply to the question.</p>
+</li>
+<li>
+<p>You are not required to make any changes to Clock or NumberDisplay.</p>
+</li>
+<li>
+<p>The modified clock display is shown in Figure 1. It displays seconds in addition to displaying hours and minutes.</p>
+</li>
+<li>
+<p>It is also necessary to add new behaviours (methods) to both ICTSkillsClock and ClockDisplay.</p>
+</li>
+<li>
+<p>The changes required to ICTSkillsClock and the ClockDisplay classes are described below.  </p>
+</li>
+</ul>
+<p><img alt="Figure 1: Clock display" src="img/clock-display.png"></p>
+<h2>Task 1</h2>
+<p>In ICTSkillsClock:</p>
+<ul>
+<li>Implement methods with the following headers:<ul>
+<li>These methods should each invoke methods of the same name in ClockDisplay.</li>
+</ul>
+</li>
+</ul>
+<pre><code>   public void resetSeconds(int value)
+   public void resetMinutes(int value)
+   public void resetHours(int value)
+</code></pre>
+
+<h2>Task 2</h2>
+<p>In ClockDisplay:</p>
+<ul>
+<li>Introduce a new NumberDisplay field to represent seconds.</li>
+<li>Initialize this field in the constructor.</li>
+<li>Modify the existing method <em>updateDisplay</em> to include seconds.</li>
+<li>Implement methods with the following headers:</li>
+</ul>
+<pre><code>   public void resetSeconds(int value)
+   public void resetMinutes(int value)
+   public void resetHours(int value)
+</code></pre>
+
+<ul>
+<li>Implement the method <strong>public void timeTick()</strong> in ClockDisplay.</li>
+<li>Increment seconds.</li>
+<li>When sixty seconds have elapsed increment minutes, ensuring seconds display recommences at zero.</li>
+<li>When sixty mintues have elapsed increment hours, ensuring minutes recommences at zero.</li>
+<li>When twenty four hours have elapsed reset entire display to zero (00:00:00).</li>
+</ul>
+<h2>Note</h2>
+<p>The purpose of these methods is to facilitate testing. For example, when you have completed the refactoring:</p>
+<ul>
+<li>Instantiate ICTSkillsClock.</li>
+<li>Start the clock. The display format is hours:minutes:seconds. </li>
+<li>Observe that the seconds display increments.</li>
+<li>Reset seconds to, say, 58.</li>
+<li>Observe that the transition from 00:00:59 to 00:01:00 occurs correctly.</li>
+<li>Reset minutes to 59.</li>
+<li>Observe that the transition from 00:59:59 to 01:00:00 occurs correctly.</li>
+<li>Reset hours to 23 and minutes to 59.</li>
+<li>Observe that the transition from 23:59:59 to 00:00:00 occurs correctly.</li>
+</ul>
+<p>Figures 2 &amp; 3 show some of the relationships in this clock module.</p>
+<p><img alt="Figure 2: Class diagrams" src="img/01.png"></p>
+<p><img alt="Figure 3: BlueJ project showing clock module class diagrams and object bench" src="img/02.png"></p>
+  </div>
+<script>
+$('.ui.menu .item')
+  .tab({
+    history: true,
+    historyType: 'hash'
+  })
+;
+</script>
+   </div>
+
+
+
+  <br><br>
+  <div class="ui bottom fixed borderless menu">
+    <div class="ui small item">
+    <p id="footertext">
+    Prepared by  John Fitzgerald (jfitzgerald@wit.ie). Except where otherwise noted, this content is licensed under a
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
+    </div>
+  </div>    <script>
+
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+})    </script>
+
+  </body>
+ </html>
